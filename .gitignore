@@ -1,0 +1,7 @@
+/venv/
+/programs/__pycache__/*
+/tests/__pycache__/*
+/.vscode/
+/htmlcov/
+/.pytest_cache/
+.coverage

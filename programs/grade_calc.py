@@ -1,7 +1,10 @@
-def avg():
-    m = int(input("Please enter your maths mark: "))
-    c = int(input("Please enter your chemistry mark: "))
-    p = int(input("Please enter your physics mark: "))
+from math import floor
+
+
+def avg(maths_mark, chem_mark, physics_mark):
+    m = maths_mark
+    c = chem_mark
+    p = physics_mark
     ave = (m+c+p)/3
     if ave >= 70:
         grade = 'A'
@@ -12,5 +15,5 @@ def avg():
     elif ave >= 40:
         grade = 'D'
     else:
-        grade = 'F'
-    return(f'Your percentage score is: {ave}% \nYou scored a grade of: {grade}')
+        return('You failed')
+    return(f'Your percentage score is: {floor(ave)}% \nYou scored a grade of: {grade}')
