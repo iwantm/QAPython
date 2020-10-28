@@ -26,6 +26,3 @@ def bc(s):
     valid_subs = list(dict.fromkeys(valid_subs))
     valid_subs.remove(s)
     return valid_subs
-
-
-print(bc('test'))
