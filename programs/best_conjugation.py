@@ -1,4 +1,4 @@
-def dict():
+def dictionary():
     text_file = open("wordlist.txt", "r")
     words = text_file.read().split("\n")
     return words
@@ -13,11 +13,10 @@ def sub(word):
 def bc(s):
     valid_subs = []
     all_subs = sub(s)
-    words = dict()
+    words = dictionary()
     for word in all_subs:
         if word.lower() in words:
             valid_subs.append(word)
-    print(valid_subs)
-
-
-bc('Awesomeness')
+    valid_subs = list(dict.fromkeys(valid_subs))
+    valid_subs.remove(s)
+    return valid_subs
