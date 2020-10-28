@@ -7,7 +7,7 @@ def test_num2words_manual_hun():
 
 
 def test_num2words_manual_thou():
-    assert num2words_manual.to_word(5011) == 'five thousand and eleven'
+    assert num2words_manual.to_word(5011) == 'five thousand, eleven'
 
 
 def test_num2words_manual_big():

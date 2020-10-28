@@ -1,5 +1,11 @@
+import os
+
+
 def dictionary():
-    text_file = open("wordlist.txt", "r")
+    script_dir = os.path.dirname(__file__)
+    rel_path = "wordlist.txt"
+    abs_file_path = os.path.join(script_dir, rel_path)
+    text_file = open(os.path.join(abs_file_path), "r")
     words = text_file.read().split("\n")
     return words
 
@@ -20,3 +26,6 @@ def bc(s):
     valid_subs = list(dict.fromkeys(valid_subs))
     valid_subs.remove(s)
     return valid_subs
+
+
+print(bc('test'))
